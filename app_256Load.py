@@ -478,11 +478,10 @@ with col2:
     print('Dados:', dados.head())
 
     #Calibração
+    # Vmax = dados['voltage'].max()
+    # Imax = dados['current'].max()
     dados['index'] = dados['index']/99960
     dados['voltage'] = dados['voltage'] * 126.5 * np.sqrt(2)/1.37
-    Vmax = dados['voltage'].max()
-    Imax = dados['current'].max()
-    dados['current'] = dados['voltage'] * Imax/Vmax
 
     #dados['current'] = dados['current'] / 993
 
